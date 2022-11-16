@@ -1,0 +1,175 @@
+.app{
+    height: 100vh;
+    display: flex;
+    background-color: blueviolet;
+    color: aliceblue;
+    
+  }
+  .main{
+    width: 90%;
+    background: linear-gradient(to bottom, rgba(0,0,0,0),blueviolet,rgb(109, 57, 147))  , url("./book.jpg" ) center;
+  display: flex;
+  flex-direction: column; 
+  }
+  .top{
+    height: 50%;
+    position: relative;
+  }
+  .timer{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border : 5px solid rgb(222, 203, 243) ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 40px;
+    font-weight: 700;
+    position: absolute;
+    bottom: 10px;
+    left: 100px;
+  
+  }
+  .buttom{
+    height: 50%;
+  }
+  
+  .quiz{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .question{
+    width: 80%;
+    background: linear-gradient(rgb(158, 112, 200),rgb(78, 14, 162));
+    border: 2px solid whitesmoke;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    font-size: 20px;
+    font-weight: 700;
+  
+  }
+  .answers{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .answer{
+    width: 40%;
+    padding: 10px;
+    text-align: center;
+    background: linear-gradient(rgb(229, 113, 212),rgb(162, 14, 140));
+  
+  border-radius: 15px;
+  font-size: 20px;
+  font-weight: 300;
+  margin: 0 10px 20px 10px;
+  cursor: pointer;
+  }
+  .answer:hover,
+  .answer.active
+  {
+    background: rgb(215, 17, 212);
+  }
+  
+  .answer.correct {
+  animation: correct 3s ease forwards;
+  
+  }
+  
+  @keyframes correct {
+    0%,
+    22%{
+      background:rgb(215, 17, 212);
+    }
+  
+    20%,
+    40%,
+    60%
+    {
+      background : linear-gradient(rgb(229, 113, 212),rgb(162, 14, 140));
+    }
+    62%,100%{
+      background: rgb(53, 164, 53);
+    }
+  }
+  
+  .answer.wrong {
+    animation: wrong 3s ease forwards;
+    
+    }
+  @keyframes wrong {
+    0%,
+    22%{
+      background:rgb(215, 17, 212);
+    }
+  
+    20%,
+    40%,
+    60%
+    {
+      background : linear-gradient(rgb(229, 113, 212),rgb(162, 14, 140));
+    }
+    62%,100%{
+      background: rgb(219, 19, 46);
+    }
+  }
+  
+  
+  .point{
+    color:rgb(35, 224, 183);
+   width: 10%;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+  
+  }
+  
+  .moneyList{
+    list-style: none;
+    width: 100%;
+    padding : 20px;
+  }
+  .moneyListItem{
+    display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+  .moneyListItem.active{
+    background-color: rgb(202, 17, 94);
+    border-radius: 50%;
+  
+  }
+  .moneyListItemNumber{
+  font-size: 18px;
+  font-weight:100 ;
+  
+  width: 30%;
+  
+  }
+  .moneyListItemPoint{
+    font-size: 22px;
+    font-weight: 300;
+  }
+    
+  .endText {
+    color: rgb(25, 2, 47);
+    width:400px;
+    height:400px;
+    text-align: center;
+  
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-image:  url("./abd.jpg" );}
+  
+    .text{
+      margin-top :150px;
+    }
